@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import BlogCard from "@/components/BlogCard";
+import { PostMeta } from "@/lib/posts";
 
-export default function BlogList({ posts }: { posts: any[] }) {
+export default function BlogList({ posts }: { posts: PostMeta[] }) {
   return (
     <div className="space-y-14">
 

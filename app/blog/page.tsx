@@ -1,8 +1,7 @@
-import { getAllPostsMeta } from "@/lib/posts";
 import BlogList from "@/components/BlogList";
+import { getAllPostsMeta } from "@/lib/posts";
 
-export default function Blog() {
-  const posts = getAllPostsMeta(); // SERVER ONLY
-
-  return <BlogList posts={posts} />; // CLIENT ANIMATION WRAPPER
+export default function BlogPage() {
+  const posts = getAllPostsMeta();
+  return <BlogList posts={posts} />;
 }

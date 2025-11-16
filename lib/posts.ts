@@ -5,7 +5,8 @@ import matter from "gray-matter";
 export type PostMeta = {
   slug: string;
   title: string;
-  excerpt: string;
+  excerpt?: string;
+  date?: string;
 };
 
 const postsDirectory = path.join(process.cwd(), "posts");
@@ -26,6 +27,7 @@ export function getAllPostsMeta(): PostMeta[] {
         slug: fileName.replace(".md", ""),
         title: data.title ?? "Untitled Post",
         excerpt: data.excerpt ?? "",
+        date: data.date ?? "",
       };
     });
 }
