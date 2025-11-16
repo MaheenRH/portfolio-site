@@ -6,14 +6,16 @@ import { motion } from "framer-motion";
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
 
+    const form = e.currentTarget;
+
     const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     };
 
     const res = await fetch("/api/contact", {
@@ -23,7 +25,7 @@ export default function Contact() {
 
     if (res.ok) {
       setStatus("success");
-      e.target.reset();
+      form.reset();
     } else {
       setStatus("error");
     }
@@ -41,7 +43,7 @@ export default function Contact() {
       </h1>
 
       <p className="text-gray-700 max-w-xl mb-8">
-        Fill out the form below and I'll get back to you quickly.
+        Fill out the form below and I’ll get back to you quickly.
       </p>
 
       {/* Contact Form */}

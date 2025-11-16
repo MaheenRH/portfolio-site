@@ -28,10 +28,12 @@ export default function About() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.25 }}
       >
-        I'm <span className="font-semibold">Maheen Adeeb</span>, an AI/ML Engineer
-        passionate about building real-world intelligent systems. I specialize in
-        LLM fine-tuning, multilingual translation pipelines, agentic workflows,
-        backend engineering, and deploying production-ready AI solutions.
+        I’m <span className="font-semibold">Maheen Adeeb</span>, an AI/ML Engineer
+passionate about building real-world intelligent systems. I specialize in
+LLM fine-tuning, multilingual translation pipelines, agentic workflows,
+backend engineering, and deploying production-ready AI solutions.
+<br />
+
         <br />
         <br />
         I focus on transforming complex ideas into elegant, scalable systems. My
