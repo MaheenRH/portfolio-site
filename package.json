@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "framer-motion": "^12.23.24",
