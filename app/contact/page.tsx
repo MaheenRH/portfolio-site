@@ -6,10 +6,9 @@ import { motion } from "framer-motion";
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("loading");
-
+async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  setStatus("loading");
     const form = e.currentTarget;
 
     const formData = {
@@ -43,7 +42,8 @@ export default function Contact() {
       </h1>
 
       <p className="text-gray-700 max-w-xl mb-8">
-        Fill out the form below and I’ll get back to you quickly.
+        Fill out the form below and I&apos;ll get back to you quickly.
+
       </p>
 
       {/* Contact Form */}
