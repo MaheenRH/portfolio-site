@@ -6,9 +6,10 @@ import { motion } from "framer-motion";
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault();
-  setStatus("loading");
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+
     const form = e.currentTarget;
 
     const formData = {
@@ -42,11 +43,9 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
       </h1>
 
       <p className="text-gray-700 max-w-xl mb-8">
-        Fill out the form below and I&apos;ll get back to you quickly.
-
+        Fill out the form below and I’ll get back to you quickly.
       </p>
 
-      {/* Contact Form */}
       <motion.form
         onSubmit={handleSubmit}
         className="bg-white w-full max-w-md shadow-lg rounded-2xl p-8 border border-gray-200 space-y-5 text-left"
@@ -89,7 +88,6 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
           ></textarea>
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg transition"
@@ -98,7 +96,6 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
           {status === "loading" ? "Sending..." : "Send Message"}
         </button>
 
-        {/* Status Messages */}
         {status === "success" && (
           <p className="text-green-600 text-center font-semibold mt-2">
             Message sent successfully!

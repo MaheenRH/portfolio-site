@@ -28,12 +28,10 @@ export default function About() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.25 }}
       >
-       I&apos;m <span className="font-semibold">Maheen Adeeb</span> , an AI/ML Engineer
-passionate about building real-world intelligent systems. I specialize in
-LLM fine-tuning, multilingual translation pipelines, agentic workflows,
-backend engineering, and deploying production-ready AI solutions.
-<br />
-
+        I&apos;m <span className="font-semibold">Maheen Adeeb</span>, an AI/ML Engineer
+        passionate about building real-world intelligent systems. I specialize in
+        LLM fine-tuning, multilingual translation pipelines, agentic workflows,
+        backend engineering, and deploying production-ready AI solutions.
         <br />
         <br />
         I focus on transforming complex ideas into elegant, scalable systems. My
@@ -49,7 +47,8 @@ backend engineering, and deploying production-ready AI solutions.
         transition={{ delay: 0.35 }}
       >
         <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
-  What I Do</h2>
+          What I Do
+        </h2>
 
         <ul className="list-disc pl-6 space-y-2 text-gray-700">
           <li>Fine-tuning LLMs (DeepSeek, Gemma, Llama) using QLoRA & DPO</li>
@@ -68,7 +67,9 @@ backend engineering, and deploying production-ready AI solutions.
         animate={{ opacity: 1 }}
         transition={{ delay: 0.45 }}
       >
-        <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">Tech Stack</h2>
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
+          Tech Stack
+        </h2>
 
         <div className="flex flex-wrap gap-3">
           {[
@@ -98,9 +99,7 @@ backend engineering, and deploying production-ready AI solutions.
         </div>
       </motion.div>
 
-      {/* Animated Journey Timeline */}
       <Timeline />
     </motion.div>
   );
 }
-
